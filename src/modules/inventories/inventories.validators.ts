@@ -11,12 +11,10 @@ export class InventoryExistValidator implements ValidatorConstraintInterface {
 
   async validate(value: string) {
     try {
-      await this.inventoryModel.findById(value);
+      return !!await this.inventoryModel.findById(value);
     } catch (e) {
       return false;
     }
-
-    return true;
   }
 
   defaultMessage({ value }: ValidationArguments) {

@@ -5,7 +5,7 @@ import * as mongoose from 'mongoose'
 export type ProductDocument = HydratedDocument<Product>;
 
 interface RefItem {
-  _id: string,
+  _id: mongoose.Types.ObjectId,
   value: number,
   optional: boolean,
 }

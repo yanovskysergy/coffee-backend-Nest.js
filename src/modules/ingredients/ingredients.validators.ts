@@ -11,7 +11,7 @@ export class IngredientExistValidator implements ValidatorConstraintInterface {
 
   async validate(value: string) {
     try {
-      await this.ingredientModel.findById(value);
+      return !!await this.ingredientModel.findById(value);
     } catch (e) {
       return false;
     }
