@@ -6,6 +6,7 @@ import { AppService } from './app.service';
 import { IngredientsModule } from './modules/ingredients/ingredients.module';
 import { InventoriesModule } from './modules/inventories/inventories.module';
 import { ProductsModule } from './modules/products/products.module';
+import { SalesModule } from './modules/sales/sales.module';
 
 @Module({
   imports: [
@@ -13,7 +14,8 @@ import { ProductsModule } from './modules/products/products.module';
     MongooseModule.forRoot(process.env.MONGO_URL),
     IngredientsModule,
     InventoriesModule,
-    ProductsModule
+    ProductsModule,
+    SalesModule
   ],
   controllers: [AppController],
   providers: [AppService],
